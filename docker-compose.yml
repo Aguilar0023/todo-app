@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  # Base de datos PostgreSQL
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: todouser
+      POSTGRES_PASSWORD: todopassword
+      POSTGRES_DB: todoapp
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U todouser -d todoapp"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Backend API
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: todouser
+      DB_PASSWORD: todopassword
+      DB_NAME: todoapp
+      PORT: 3000
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # Frontend (será completado por tu compañero)
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
