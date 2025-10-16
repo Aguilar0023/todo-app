@@ -1,7 +1,7 @@
 <div align="center">
 
 # 🧩 TODO APP – Sistema de Gestión de Tareas  
-### 🚀 Proyecto de Laboratorio – Cátedra **Implementación de Sistemas**
+### 🚀 Proyecto de Laboratorio – Cátedra **Implantación de Sistemas**
 
 ![Docker](https://img.shields.io/badge/Docker-Desktop-blue?logo=docker)
 ![Node](https://img.shields.io/badge/Node.js-18+-green?logo=node.js)
