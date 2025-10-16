@@ -118,10 +118,10 @@ todo-app/
 ### 🧩 1. Clonar el repositorio
 ```bash
 # SSH
-git clone git@github.com:<usuario>/<todo-app>.git
+git clone git@github.com:Aguilar0023/todo-app.git
 
 # HTTPS
-git clone https://github.com/<usuario>/<todo-app>.git
+git clone https://github.com/Aguilar0023/todo-app.git
 
 cd todo-app
 ```
