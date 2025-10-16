@@ -202,9 +202,9 @@ services:
   db:
     image: postgres:15-alpine
     environment:
-      POSTGRES_USER: appuser
-      POSTGRES_PASSWORD: secret
-      POSTGRES_DB: appdb
+      POSTGRES_USER: todouser
+      POSTGRES_PASSWORD: todopassword
+      POSTGRES_DB: todoapp
     ports: ["5432:5432"]
     volumes:
       - pgdata:/var/lib/postgresql/data

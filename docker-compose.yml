@@ -34,7 +34,7 @@ services:
       db:
         condition: service_healthy
 
-  # Frontend (será completado por tu compañero)
+  # Frontend 
   frontend:
     build: ./frontend
     ports:
